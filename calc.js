@@ -8,8 +8,9 @@
 function add(numbers) {
     let sum = 0;
     try {
-        // Splitting the numbers into an array | e.g. "1,2,3" -> [1,2,3]
-        const numbersArr = numbers.trim("").split(",");
+        // Splitting the numbers into an array | e.g. "1\n2,3" -> [1,2,3]
+        const numbersArr = numbers.trim("").split(/,|\n/);
+        
         // Looping on array to calculate the sum
         numbersArr.map((num) => {
             // Parsing the number into an integer
@@ -32,5 +33,6 @@ function add(numbers) {
 const sum1 = add("");
 const sum2 = add("1");
 const sum3 = add("1,5");
+const sum4 = add("1\n2,3");
 
-console.log({ sum1, sum2, sum3 });
+console.log({ sum1, sum2, sum3, sum4 });
