@@ -1,3 +1,10 @@
+/**
+ * Adds a series of comma-separated numbers.
+ * 
+ * @param {string} numbers - A string containing numbers separated by commas.
+ * @returns {number} The sum of the numbers.
+ * @throws Will throw an error if any of the inputs are not valid numbers.
+ */
 function add(numbers) {
     let sum = 0;
     try {
@@ -16,7 +23,7 @@ function add(numbers) {
         });
     } catch (err) {
         console.error(`Error while adding numbers | Error: ${err.message}`);
-        // Reseting sum incase of an error.
+        // Resetting sum in case of an error.
         sum = 0;
     }
     return sum;
